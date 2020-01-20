@@ -1,0 +1,37 @@
+import React, { Component } from 'react';
+
+class Ninjas extends Component{
+    render(){
+        //console.log(this.props);
+       // document.write(this.props.name);
+       const {name,age,belt} = this.props; 
+       return( /*
+            <div className="ninja">
+                <div>Name {this.props.name}</div>
+                <div>Age: {this.props.age}</div>
+                <div>Belt :{this.props.belt}</div>
+            </div>*/
+            <div className="ninja">
+            <div>Name {name}</div>
+            <div>Age: {age}</div>
+            <div>Belt :{belt}</div>
+        </div>
+        )
+    }
+}
+
+export default Ninjas
+
+///App.js file
+import React from 'react';
+import Ninjas from './ninja'
+function App() {
+  return (
+    <div >
+      <p>Hello</p>
+      <Ninjas name="Shiv" age="22" belt="black"/>
+    </div>
+  );
+}
+
+export default App;
